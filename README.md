@@ -81,7 +81,7 @@ The scripts reproduce the main estimation results, robustness analyses, suppleme
 
 If you use this code, please cite the corresponding article:
 
-> **Minju Lee, Mijeong Kim** *Pollutant-Specific and Spatial Spillover Effects of Low Emission Zones in South Korea: A Staggered Spatial DID Analysis.* (Manuscript under review.)
+> **Minju Lee, Mijeong Kim,** *Pollutant-Specific and Spatial Spillover Effects of Low Emission Zones in South Korea: A Staggered Spatial DID Analysis.* (Manuscript under review.)
 
 ## License
 
