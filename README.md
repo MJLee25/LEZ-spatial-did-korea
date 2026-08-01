@@ -25,10 +25,17 @@ Due to licensing and data-sharing restrictions, some raw datasets are **not** in
 ## Repository Structure
 
 ```text
-├── data/
-│   ├── raw/            # Original data (not included)
-│   └── processed/      # Processed analysis datasets
-│
+
+├──data/
+│   └── raw/
+│       └── README.md          # Original data and data source
+│   └── processed/             # Spatial weight matrices
+│         ├── listw_k3.rds
+│         ├── listw_k5.rds
+│         ├── listw_k7.rds
+│         ├── listw_50km.rds
+│         └── listw_70km.rds
+│ 
 ├── code/
 │   ├── 01_prepare_data.R
 │   ├── 02_descriptive_analysis.R
@@ -40,8 +47,7 @@ Due to licensing and data-sharing restrictions, some raw datasets are **not** in
 │
 ├── output/
 │   ├── tables/
-│   ├── figures/
-│   └── models/
+│   └── figures/
 │
 ├── README.md
 └── LICENSE
