@@ -1,10 +1,8 @@
-# LEZ-spatial-did-korea
-
 # LEZ Spatial DID Korea
 
 Replication code for the study:
 
-**Regional Spillover Effects of Low Emission Zones on Air Quality: Evidence from South Korea**
+**Pollutant-Specific and Spatial Spillover Effects of Low Emission Zones in South Korea: A Staggered Spatial DID Analysis**
 
 ## Overview
 
@@ -55,18 +53,17 @@ Due to licensing and data-sharing restrictions, some raw datasets are **not** in
 
 Main R packages include:
 
+* readxl
 * sf
+* dplyr
 * spdep
 * splm
+* plm
 * did
-* fixest
-* dplyr
-* tidyr
 * ggplot2
 * MASS
-* broom
-* modelsummary
-
+* tidyr
+* 
 ## Replication
 
 Run the scripts in the following order:
@@ -80,17 +77,11 @@ Run the scripts in the following order:
 
 The scripts reproduce the main estimation results, robustness analyses, supplementary analyses, and manuscript figures.
 
-## Reproducibility
-
-Random-number generation used for simulation-based inference is initialized with fixed seeds to ensure reproducibility.
-
-Minor numerical differences may occur across operating systems or package versions.
-
 ## Citation
 
 If you use this code, please cite the corresponding article:
 
-> **Authors.** *Regional Spillover Effects of Low Emission Zones on Air Quality: Evidence from South Korea.* (Manuscript under review.)
+> **Minju Lee, Mijeong Kim** *Pollutant-Specific and Spatial Spillover Effects of Low Emission Zones in South Korea: A Staggered Spatial DID Analysis.* (Manuscript under review.)
 
 ## License
 
