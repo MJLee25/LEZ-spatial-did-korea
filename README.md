@@ -63,7 +63,7 @@ Main R packages include:
 * ggplot2
 * MASS
 * tidyr
-
+* purrr
 
 ## Replication
 
