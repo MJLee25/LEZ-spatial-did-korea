@@ -33,10 +33,6 @@ Due to licensing and data-sharing restrictions, raw/preprocessed datasets are **
 │   ├── 5_Spatial Staggered DID.R
 │   └── 6_Placebo Test.R
 │
-├── output/
-│   ├── tables/
-│   └── figures/
-│
 ├── README.md
 └── LICENSE
 ```
