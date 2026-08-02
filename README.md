@@ -22,9 +22,6 @@ The empirical analysis combines multiple publicly available datasets, including:
 
 Due to licensing and data-sharing restrictions, raw/preprocessed datasets are **not** included in this repository. Users should obtain the original data from the corresponding public agencies before running the replication code.
 
-* `dat.xlsx`: preprocessed data can be given when requested
-* `korea.geojson`: si-gun-gu shapefile 
-
 ## Repository Structure
 
 ```text
