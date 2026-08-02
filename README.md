@@ -14,35 +14,27 @@ The repository includes scripts for data preparation, descriptive analyses, econ
 
 The empirical analysis combines multiple publicly available datasets, including:
 
-* Air pollution monitoring data
-* Meteorological variables
-* Urban and transportation characteristics
-* Administrative boundary data
-* LEZ implementation information
+* Air pollution monitoring data: Air Korea
+* Meteorological variables: KMA(korean meteorological administration)
+* Urban variables: Korea Land and Geospatial Informatix Corporation, KOSIS(for population variables)
+* Transportation variables: Ministry of Land, Infrastructure and Transport, Korea Transportation Safety Authority
+* Administrative boundary data: KOSIS
 
-Due to licensing and data-sharing restrictions, some raw datasets are **not** included in this repository. Users should obtain the original data from the corresponding public agencies before running the replication code.
+Due to licensing and data-sharing restrictions, raw/preprocessed datasets are **not** included in this repository. Users should obtain the original data from the corresponding public agencies before running the replication code.
+
+* `dat.xlsx`: preprocessed data can be given when requested
+* `korea.geojson`: si-gun-gu shapefile 
 
 ## Repository Structure
 
 ```text
-
-├──data/
-│   └── raw/
-│       └── README.md          # Original data and data source
-│   └── processed/             # Spatial weight matrices
-│         ├── listw_k3.rds
-│         ├── listw_k5.rds
-│         ├── listw_k7.rds
-│         ├── listw_50km.rds
-│         └── listw_70km.rds
-│ 
 ├── code/
-│   ├── 01_prepare_data.R
-│   ├── 02_descriptive_analysis.R
-│   ├── 03_staggered_DID.R
-│   ├── 04_spatial_DID.R
-│   ├── 05_robustness_checks.R
-│   ├── 06_figures_tables.R
+│   ├── 1_parallel_trend.R
+│   ├── 2_global morans I.R
+│   ├── 3_LM Test.R
+│   ├── 4_TWFE-DID.R
+│   ├── 5_Spatial Staggered DID.R
+│   ├── 6_Placebo Test.R
 │   └── functions.R
 │
 ├── output/
@@ -75,14 +67,20 @@ Main R packages include:
 
 Run the scripts in the following order:
 
-1. `01_prepare_data.R`
-2. `02_descriptive_analysis.R`
-3. `03_staggered_DID.R`
-4. `04_spatial_DID.R`
-5. `05_robustness_checks.R`
-6. `06_figures_tables.R`
+1. `1_parallel_trend.R`
+2. `2_global morans I.R`
+3. `3_LM Test.R`
+4. `4_TWFE-DID.R`
+5. `5_Spatial Staggered DID.R`
+6. `6_Placebo Test.R`
 
 The scripts reproduce the main estimation results, robustness analyses, supplementary analyses, and manuscript figures.
+
+`5_Spatial Staggered DID.R` contains all the robustness analysis(COVID-19, Rainfall sensitivity, Alternative Matrix), however, requires the user to run additional code lines states as annotations in the R code.
+
+* Rainfall Sensitivity(Table 6): run line 315-354
+* COVID-19 Sensitivity(Table S5): run line 23 (exclude 2020-2022 in dataset)
+* Alternative Matrix(Table S6): run line 105-106 (exclude `avg_rain` in dataset)
 
 ## Citation
 
