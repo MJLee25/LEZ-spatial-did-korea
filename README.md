@@ -31,8 +31,7 @@ Due to licensing and data-sharing restrictions, raw/preprocessed datasets are **
 │   ├── 3_LM Test.R
 │   ├── 4_TWFE-DID.R
 │   ├── 5_Spatial Staggered DID.R
-│   ├── 6_Placebo Test.R
-│   └── functions.R
+│   └── 6_Placebo Test.R
 │
 ├── output/
 │   ├── tables/
