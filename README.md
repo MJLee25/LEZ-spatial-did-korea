@@ -76,8 +76,8 @@ The scripts reproduce the main estimation results, robustness analyses, suppleme
 `5_Spatial Staggered DID.R` contains all the robustness analysis(COVID-19, Rainfall sensitivity, Alternative Matrix), however, requires the user to run additional code lines states as annotations in the R code.
 
 * Rainfall Sensitivity(Table 6): run line 315-354
-* COVID-19 Sensitivity(Table S5): run line 23 (exclude 2020-2022 in dataset)
-* Alternative Matrix(Table S6): run line 105-106 (exclude `avg_rain` in dataset)
+* COVID-19 Sensitivity(Table S3): run line 23 (exclude 2020-2022 in dataset)
+* Alternative Matrix(Table S4): run line 105-106 (exclude `avg_rain` in dataset)
 
 ## Citation
 
