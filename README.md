@@ -103,11 +103,12 @@ Run the scripts in the following order:
 
 The scripts reproduce the main estimation results, robustness analyses, supplementary analyses, and manuscript figures.
 
-`5_Spatial Staggered DID.R` contains all the robustness analysis(COVID-19, Rainfall sensitivity, Alternative Matrix), however, requires the user to run additional code lines states as annotations in the R code.
+`5_Spatial Staggered DID.R` also contains the following robustness analyses:
 
-* Alternative Matrix: run line 315-354
-* COVID-19 Sensitivity: run line 23 (exclude 2020-2022 in dataset)
-* Rainfall Sensitivity: run line 105-106, 155 (exclude `avg_rain` in dataset)
+- **Alternative spatial-weight matrices:** kNN (k = 3, 5, 7) and inverse-distance cutoff matrices (50 km and 70 km).
+- **COVID-19 sensitivity:** uncomment the annotated filter excluding 2020–2022.
+- **Rainfall sensitivity:** uncomment the annotated specifications excluding `avg_rain` from `climate`, `vars`, and `w_climate`.
+
 
 ## Important Interpretation Note
 
