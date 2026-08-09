@@ -64,17 +64,18 @@ Due to licensing and data-sharing restrictions, these input datasets are **not**
 
 Main R packages include:
 
-* readxl
-* sf
-* dplyr
-* spdep
-* splm
-* plm
-* did
-* ggplot2
-* MASS
-* tidyr
-* purrr
+* `readxl`
+* `sf`
+* `dplyr`
+* `spdep`
+* `splm`
+* `plm`
+* `did`
+* `ggplot2`
+* `MASS`
+* `tidyr`
+* `purrr`
+* `gridExtra`
 
 ## Replication
 
