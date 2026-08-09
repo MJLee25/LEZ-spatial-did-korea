@@ -10,13 +10,6 @@ This repository contains the R code used for the main empirical analyses present
 
 The analysis combines group-time event-study diagnostics for staggered LEZ adoption with non-spatial two-way fixed-effects (TWFE) models and spatial panel models. The repository also includes code for spatial autocorrelation diagnostics, robustness analyses using alternative spatial-weight matrices, and placebo tests.
 
-- Air pollution: [AirKorea annual air-quality data](https://airkorea.or.kr/web/detailViewDown?pMENU_NO=125)
-- Meteorology: [KMA Open MET Data Portal](https://data.kma.go.kr/resources/html/en/ncdci.html)
-- Road paving: [KOSIS road statistics](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL20721&conn_path=I3)
-- Registered vehicles: [KOSIS vehicles per capita](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL20731&conn_path=I3)
-- Daily distance per vehicle: [Korea Transportation Safety Authority data](https://www.data.go.kr/data/15088483/fileData.do)
-- Urban land use: [KOSIS/LX urban-area statistics](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL20421E&conn_path=I3)
-- LEZ rollout: [MECAR old-diesel vehicle restriction information](https://www.mecar.or.kr/dr/info/oldDieselCarAlwaysDr.do)
 ### Data Sources
 
 - **Air pollution**
