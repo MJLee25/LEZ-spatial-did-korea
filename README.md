@@ -2,7 +2,7 @@
 
 Replication code for the study:
 
-**Pollutant-Specific and Spatial Spillover Effects of Low Emission Zones in South Korea: A Staggered Spatial DID Analysis**
+**Pollutant-Specific and Spatial Air-Quality Responses to Low Emission Zones in South Korea: A Spatial Panel Analysis of Staggered Adoption**
 
 ## Overview
 
