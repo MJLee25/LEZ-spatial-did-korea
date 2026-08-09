@@ -45,12 +45,14 @@ The analysis combines group-time event-study diagnostics for staggered LEZ adopt
     - `g_cs`: First-treatment-year variable used for the *Callaway–Sant'Anna group-time DID analysis*. It corresponds to `g`, with never-treated units recoded to `0`.
     - `did`: Time-varying LEZ treatment indicator. Equals 0 before a unit's first treatment year and 1 from the treatment year onward; it remains 0 for never-treated units.
     - `Wdid`: Spatially lagged LEZ treatment exposure, calculated from the contemporaneous `did` values of neighboring si-gun-gu units using a row-standardized spatial weight matrix. Under the baseline specification, the spatial weights are based on five nearest neighbors (kNN, k = 5).
-   
+
 The final analysis sample consists of 247 si-gun-gu units observed annually from 2014 to 2024, excluding Ongjin-gun and Ulleung-gun.
-The analysis scripts require two input files:
+The analysis scripts require two input files
 
 - `dat.xlsx`: the processed si-gun-gu-year panel containing outcomes, treatment variables, and covariates.
 - `korea.geojson`: the si-gun-gu administrative boundary file used for spatial operations and construction of spatial weight matrices.
+
+The numeric panel identifier (`id`) was constructed from the si-gun-gu administrative code. Unique administrative codes were sorted in ascending order and assigned sequential integer IDs. The resulting identifier is constant for each si-gun-gu across all years and is used as the panel index in the DID and spatial panel models.
 
 Due to licensing and data-sharing restrictions, these input datasets are **not** included in this repository. Users should obtain the original data from the corresponding public agencies before running the replication code.
 
