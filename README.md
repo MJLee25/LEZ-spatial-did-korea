@@ -110,9 +110,9 @@ Conditional on the required processed input files, the scripts reproduce the mai
 `5_Spatial Staggered DID.R` also contains the following robustness analyses:
 
 - **Alternative spatial-weight matrices:** kNN (k = 3, 5, 7) and inverse-distance cutoff matrices (50 km and 70 km).
-- **COVID-19 sensitivity:** uncomment the annotated filter excluding 2020–2022.
-- **Rainfall sensitivity:** uncomment the annotated specifications excluding `avg_rain` from `climate`, `vars`, and `w_climate`.
-
+*By default, the script estimates the SDM using kNN matrices with k = 3, 5, and 7 and inverse-distance cutoff matrices of 50 km and 70 km. Because estimating all specifications with simulation-based spatial impacts may be time-consuming, users interested only in the baseline specification can run the kNN k = 5 model (`final_k5`, `listw_k5`, and `res_k5`) and skip the alternative weight-matrix models.*
+- **COVID-19 sensitivity:** uncomment the annotated filter excluding 2020–2022.  *line 23*
+- **Rainfall sensitivity:** uncomment the annotated specifications excluding `avg_rain` from `climate`, `vars`, and `w_climate`.  *line 105-106, 155*
 
 ## Important Interpretation Note
 
