@@ -1,6 +1,6 @@
 # LEZ Spatial DID Korea
 
-Replication code for the study:
+Analysis code for the study:
 
 **Pollutant-Specific and Spatial Air-Quality Responses to Low Emission Zones in South Korea: A Spatial Panel Analysis of Staggered Adoption**
 
