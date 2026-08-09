@@ -6,9 +6,10 @@ Replication code for the study:
 
 ## Overview
 
-This repository contains the R code used to reproduce the empirical analyses presented in the manuscript. The study evaluates the effects of Low Emission Zone (LEZ) policies on ambient air quality in South Korea using staggered Difference-in-Differences (DID) and Spatial Difference-in-Differences (Spatial DID) models.
+This repository contains the R code used to reproduce the empirical analyses presented in the manuscript. The study examines pollutant-specific and spatial air-quality responses associated with South Korea's phased Low Emission Zone (LEZ) expansion using staggered Difference-in-Differences (DID) diagnostics and spatial panel models.
 
-The repository includes scripts for data preparation, descriptive analyses, econometric estimation, robustness checks, and figure generation.
+The repository includes scripts for descriptive analyses, econometric estimation, spatial diagnostics, robustness checks, and figure generation.
+
 
 ## Data
 
