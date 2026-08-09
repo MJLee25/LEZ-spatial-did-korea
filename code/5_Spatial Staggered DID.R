@@ -152,7 +152,7 @@ w_car = 'w_daily_km + w_road_paving_rate + w_cars_per_capita'
 w_climate = 'w_avg_rain + w_annual_humid + w_summer_temp + w_winter_temp + w_summer_sun + w_stagnation_days'
 
 ######## Robustness Check(Rain Sensitivity, Table S6): Exclude avg_rain  #######
-## w_climate = = 'w_annual_humid + w_summer_temp + w_winter_temp + w_summer_sun + w_stagnation_days'
+## w_climate = 'w_annual_humid + w_summer_temp + w_winter_temp + w_summer_sun + w_stagnation_days'
 
 sdid_fn = function(data, listw_obj, y, R = R) {
   
