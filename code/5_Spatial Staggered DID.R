@@ -273,9 +273,9 @@ data.frame(
   Lambda = sapply(outcomes, function(x)
     sprintf("%.3f%s",
             coef(res_k5[[x]]$model)["lambda"],
-            ifelse(summary(res_k5[[x]]$model)$Coef["lambda","Pr(>|t|)"] < 0.001, "***",
-                   ifelse(summary(res_k5[[x]]$model)$Coef["lambda","Pr(>|t|)"] < 0.01, "**",
-                          ifelse(summary(res_k5[[x]]$model)$Coef["lambda","Pr(>|t|)"] < 0.05, "*", ""))))
+            ifelse(summary(res_k5[[x]]$model)$Coef["lambda","Pr(>|t|)"] < 0.01, "***",
+                   ifelse(summary(res_k5[[x]]$model)$Coef["lambda","Pr(>|t|)"] < 0.05, "**",
+                          ifelse(summary(res_k5[[x]]$model)$Coef["lambda","Pr(>|t|)"] < 0.1, "*", ""))))
   ))
 
 ### Direct, Indirect, Total
