@@ -95,6 +95,9 @@ The scripts reproduce the main estimation results, robustness analyses, suppleme
 * COVID-19 Sensitivity(Table S3): run line 23 (exclude 2020-2022 in dataset)
 * Alternative Matrix(Table S4): run line 105-106 (exclude `avg_rain` in dataset)
 
+## Important Interpretation Note
+
+The group-time event-study diagnostic rejects joint parallel trends for all five pollutants in the current analysis. Cohort-specific linear-trend sensitivity checks also materially alter the baseline spatial estimates. Results should therefore be interpreted as conditional spatial policy associations rather than definitive causal effects.
 ## Citation
 
 If you use this code, please cite the corresponding article:
