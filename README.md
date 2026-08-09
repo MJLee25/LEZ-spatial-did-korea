@@ -107,8 +107,8 @@ If you use this code, please cite the corresponding article:
 
 ## License
 
-This repository is released under the MIT License unless otherwise noted.
+The MIT License applies to repository code only. It does not grant rights to third-party source data.
 
 ## Contact
 
-For questions regarding the replication materials, please open a GitHub Issue or contact the corresponding author.
+Please open a GitHub issue or contact the corresponding author for questions about the scripts or required input schema.
