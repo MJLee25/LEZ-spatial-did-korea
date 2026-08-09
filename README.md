@@ -46,7 +46,7 @@ Due to licensing and data-sharing restrictions, these input datasets are **not**
 ## Repository Structure
 
 ```text
-├── code/
+├── code
 │   ├── 1_parallel_trend.R
 │   ├── 2_global morans I.R
 │   ├── 3_LM Test.R
