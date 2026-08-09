@@ -11,16 +11,6 @@ This repository contains the R code used for the main empirical analyses present
 The analysis combines group-time event-study diagnostics for staggered LEZ adoption with non-spatial two-way fixed-effects (TWFE) models and spatial panel models. The repository also includes code for spatial autocorrelation diagnostics, robustness analyses using alternative spatial-weight matrices, and placebo tests.
 
 
-## Data
-
-The empirical analysis combines multiple publicly available datasets at the si-gun-gu level for 2014–2024. The main data sources are:
-
-- **Air pollution data:** Air Korea monitoring data for CO, SO2, NO2, O3, and PM10.
-- **Meteorological data:** Korea Meteorological Administration (KMA) ASOS station data. The analysis uses annual average daily precipitation, annual relative humidity, summer mean temperature, winter mean temperature, summer sunshine duration, and atmospheric stagnation days. Precipitation was calculated as annual total precipitation divided by 365, and stagnation days were defined as days with mean wind speed ≤ 2 m/s.
-- **Urban and demographic data:** Korea Land and Geospatial Informatix Corporation (LX) and the Korean Statistical Information Service (KOSIS), including industrial, commercial, and green-area variables and resident registered population. Population density was calculated as resident registered population divided by the si-gun-gu land area (km²) derived from the administrative boundary shapefile.
-- **Transportation data:** Ministry of Land, Infrastructure and Transport (MOLIT) for road paving rates and vehicle registrations, and the Korea Transportation Safety Authority (KTSA) for average daily vehicle distance traveled.
-
-
 ### Data Sources
 
 - **Air pollution**
@@ -34,17 +24,17 @@ The empirical analysis combines multiple publicly available datasets at the si-g
   - **Construction:** Annual average daily precipitation was calculated as annual total precipitation divided by 365 days. Atmospheric stagnation days were defined as days with mean wind speed ≤ 2 m/s.
   - **Processing:** Station-level observations were spatially interpolated to si-gun-gu-level values using IDW (power = 2).
 
-- **Urban and demographic characteristics**
+- **Urban Structure**
   - **Sources:** Korea Land and Geospatial Informatix Corporation (LX) and Korean Statistical Information Service (KOSIS)
-  - **Variables:** Resident registered population, industrial area, commercial area, and green area.
+  - **Variables:** Population density(`pop_density`), industrial area(`industrial_area`), commercial area(`commercial_area`), and green area(`green_area`).
   - **Construction:** Population density was calculated as resident registered population divided by the land area (km²) of each si-gun-gu derived from the administrative boundary data. Green area was expressed on a per-capita basis.
 
 - **Transportation**
   - **Sources:** Ministry of Land, Infrastructure and Transport (MOLIT) and Korea Transportation Safety Authority (KTSA)
-  - **Variables:** Road paving rate, registered vehicles, and average daily vehicle distance traveled.
+  - **Variables:** Road paving rate(`road_paving_rate`), registered vehicles(`cars_per_capita`), and average daily vehicle distance traveled(`daily_km`).
   - **Construction:** Cars per capita was calculated as registered vehicles divided by resident registered population. Average daily vehicle distance traveled is expressed in km per vehicle per day.
 
-Station-level air-pollution and meteorological observations were spatially interpolated to si-gun-gu-level values using inverse-distance weighting (IDW, power = 2). The final analysis sample consists of 247 si-gun-gu units observed annually from 2014 to 2024, excluding Ongjin-gun and Ulleung-gun.
+The final analysis sample consists of 247 si-gun-gu units observed annually from 2014 to 2024, excluding Ongjin-gun and Ulleung-gun.
 
 The analysis scripts require two input files:
 
