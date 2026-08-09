@@ -90,6 +90,8 @@ Main R packages include:
 * `purrr`
 * `gridExtra`
 
+For the exact R environment and package versions used in the analysis, see [`sessionInfo.txt`](sessionInfo.txt).
+
 ## Replication
 
 Run the scripts in the following order:
