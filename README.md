@@ -15,11 +15,11 @@ The repository includes scripts for data preparation, descriptive analyses, econ
 The empirical analysis combines multiple publicly available datasets at the si-gun-gu level for 2014–2024. The main data sources are:
 
 - **Air pollution data:** Air Korea monitoring data for CO, SO2, NO2, O3, and PM10.
-- **Meteorological data:** Korea Meteorological Administration (KMA) Open MET Data Portal, including precipitation, relative humidity, summer and winter temperature, summer sunshine duration, and atmospheric stagnation days.
+- **Meteorological data:** Korea Meteorological Administration (KMA) ASOS station data. The analysis uses annual average daily precipitation, annual relative humidity, summer mean temperature, winter mean temperature, summer sunshine duration, and atmospheric stagnation days. Precipitation was calculated as annual total precipitation divided by 365, and stagnation days were defined as days with mean wind speed ≤ 2 m/s.
 - **Urban and demographic data:** Korea Land and Geospatial Informatix Corporation (LX) and the Korean Statistical Information Service (KOSIS), including industrial, commercial, and green-area variables and resident registered population. Population density was calculated as resident registered population divided by the si-gun-gu land area (km²) derived from the administrative boundary shapefile.
 - **Transportation data:** Ministry of Land, Infrastructure and Transport (MOLIT) for road paving rates and vehicle registrations, and the Korea Transportation Safety Authority (KTSA) for average daily vehicle distance traveled.
 
-Station-level air-pollution and meteorological observations were spatially interpolated to si-gun-gu-level values using inverse-distance weighting (IDW). The final analysis sample consists of 247 si-gun-gu units observed annually from 2014 to 2024, excluding Ongjin-gun and Ulleung-gun.
+Station-level air-pollution and meteorological observations were spatially interpolated to si-gun-gu-level values using inverse-distance weighting (IDW, power = 2). The final analysis sample consists of 247 si-gun-gu units observed annually from 2014 to 2024, excluding Ongjin-gun and Ulleung-gun.
 
 Due to licensing and data-sharing restrictions, raw/preprocessed datasets are **not** included in this repository. Users should obtain the original data from the corresponding public agencies before running the replication code.
 
