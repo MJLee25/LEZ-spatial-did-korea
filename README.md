@@ -19,7 +19,8 @@ The analysis combines group-time event-study diagnostics for staggered LEZ adopt
     
 - **Meteorology**
   - **Source:** [KMA Open MET Data Portal](https://data.kma.go.kr/resources/html/en/ncdci.html)
-  - **Variables:** Annual average daily precipitation(`avg_rain`), annual average relative humidity(`annual_humid`), summer(june-august) average temperature(`summer_temp`), winter(december-february) average temperature(`winter_temp`), summer total sunshine duration(`summer_sun`), and stagnation days(`stagnation_days`).
+  - **Variables:** Annual average daily precipitation(`avg_rain`), annual average relative humidity(`annual_humid`), summer average temperature(`summer_temp`), winter average temperature(`winter_temp`), summer total sunshine duration(`summer_sun`), and stagnation days(`stagnation_days`).
+  - Winter temperature was calculated using December of the preceding year and January–February of the current year, while summer temperature and sunshine duration were calculated using June–August of the current year.
   - **Construction:** Annual average daily precipitation was calculated as annual total precipitation divided by 365 days. Atmospheric stagnation days were defined as days with mean wind speed ≤ 2 m/s.
   - **Processing:** Station-level observations were spatially interpolated to si-gun-gu-level values using IDW (power = 2).
 
