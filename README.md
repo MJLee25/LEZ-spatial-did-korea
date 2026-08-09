@@ -6,9 +6,9 @@ Replication code for the study:
 
 ## Overview
 
-This repository contains the R code used to reproduce the empirical analyses presented in the manuscript. The study examines pollutant-specific and spatial air-quality responses associated with South Korea's phased Low Emission Zone (LEZ) expansion using staggered Difference-in-Differences (DID) diagnostics and spatial panel models.
+This repository contains the R code used for the main empirical analyses presented in the manuscript. The study examines pollutant-specific and spatial air-quality responses associated with South Korea's phased Low Emission Zone (LEZ) expansion over 2014–2024.
 
-The repository includes scripts for descriptive analyses, econometric estimation, spatial diagnostics, robustness checks, and figure generation.
+The analysis combines group-time event-study diagnostics for staggered LEZ adoption with non-spatial two-way fixed-effects (TWFE) models and spatial panel models. The repository also includes code for spatial autocorrelation diagnostics, robustness analyses using alternative spatial-weight matrices, and placebo tests.
 
 
 ## Data
@@ -22,7 +22,12 @@ The empirical analysis combines multiple publicly available datasets at the si-g
 
 Station-level air-pollution and meteorological observations were spatially interpolated to si-gun-gu-level values using inverse-distance weighting (IDW, power = 2). The final analysis sample consists of 247 si-gun-gu units observed annually from 2014 to 2024, excluding Ongjin-gun and Ulleung-gun.
 
-Due to licensing and data-sharing restrictions, raw/preprocessed datasets are **not** included in this repository. Users should obtain the original data from the corresponding public agencies before running the replication code.
+The analysis scripts require two input files:
+
+- `dat.xlsx`: the processed si-gun-gu-year panel containing outcomes, treatment variables, and covariates.
+- `korea.geojson`: the si-gun-gu administrative boundary file used for spatial operations and construction of spatial weight matrices.
+
+Due to licensing and data-sharing restrictions, these input datasets are **not** included in this repository. Users should obtain the original data from the corresponding public agencies before running the replication code.
 
 ## Repository Structure
 
