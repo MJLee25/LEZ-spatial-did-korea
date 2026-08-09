@@ -69,6 +69,7 @@ Due to licensing and data-sharing restrictions, these input datasets are **not**
 │   └── 6_Placebo Test.R
 │
 ├── README.md
+├── sessionInfo.txt
 └── LICENSE
 ```
 
