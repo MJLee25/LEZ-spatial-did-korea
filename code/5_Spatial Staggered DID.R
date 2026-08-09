@@ -102,7 +102,7 @@ vars = c(
 )
 
 ######## Robustness Check(Rain Sensitivity, Table S6): Exclude avg_rain  #######
-## climate = climate[climate != 'avg_rain']
+## climate = 'annual_humid + summer_temp + winter_temp + summer_sun + stagnation_days'
 ## vars = vars[vars != "avg_rain"]
 
 make_wvars = function(data, listw_obj, vars) {
