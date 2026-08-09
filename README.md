@@ -12,12 +12,14 @@ The repository includes scripts for data preparation, descriptive analyses, econ
 
 ## Data
 
-The empirical analysis combines multiple publicly available datasets, including:
+The empirical analysis combines multiple publicly available datasets at the si-gun-gu level for 2014–2024. The main data sources are:
 
-* Air pollution monitoring data: Air Korea
-* Meteorological variables: KMA(korean meteorological administration)
-* Urban variables: Korea Land and Geospatial Informatix Corporation, KOSIS(for population variable)
-* Transportation variables: Ministry of Land, Infrastructure and Transport, Korea Transportation Safety Authority
+- **Air pollution data:** Air Korea monitoring data for CO, SO2, NO2, O3, and PM10.
+- **Meteorological data:** Korea Meteorological Administration (KMA) Open MET Data Portal, including precipitation, relative humidity, summer and winter temperature, summer sunshine duration, and atmospheric stagnation days.
+- **Urban and demographic data:** Korea Land and Geospatial Informatix Corporation (LX) and the Korean Statistical Information Service (KOSIS), including industrial, commercial, and green-area variables and resident registered population. Population density was calculated as resident registered population divided by the si-gun-gu land area (km²) derived from the administrative boundary shapefile.
+- **Transportation data:** Ministry of Land, Infrastructure and Transport (MOLIT) for road paving rates and vehicle registrations, and the Korea Transportation Safety Authority (KTSA) for average daily vehicle distance traveled.
+
+Station-level air-pollution and meteorological observations were spatially interpolated to si-gun-gu-level values using inverse-distance weighting (IDW). The final analysis sample consists of 247 si-gun-gu units observed annually from 2014 to 2024, excluding Ongjin-gun and Ulleung-gun.
 
 Due to licensing and data-sharing restrictions, raw/preprocessed datasets are **not** included in this repository. Users should obtain the original data from the corresponding public agencies before running the replication code.
 
