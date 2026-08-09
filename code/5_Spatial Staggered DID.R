@@ -11,7 +11,7 @@ library(tidyr)
 library(purrr)
 
 ##### Import Data
-dat = read_xlsx("dat.xlsx")   #original data 
+dat = read_xlsx("dat.xlsx")   
 dat = dat %>% arrange(id, year)
 
 korea = geojsonsf::geojson_sf("korea.geojson")   #shp file for korea si-gun-gu units
