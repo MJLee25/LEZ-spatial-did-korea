@@ -18,7 +18,6 @@ The empirical analysis combines multiple publicly available datasets, including:
 * Meteorological variables: KMA(korean meteorological administration)
 * Urban variables: Korea Land and Geospatial Informatix Corporation, KOSIS(for population variables)
 * Transportation variables: Ministry of Land, Infrastructure and Transport, Korea Transportation Safety Authority
-* Administrative boundary data: KOSIS
 
 Due to licensing and data-sharing restrictions, raw/preprocessed datasets are **not** included in this repository. Users should obtain the original data from the corresponding public agencies before running the replication code.
 
