@@ -89,6 +89,7 @@ Main R packages include:
 * `tidyr`
 * `purrr`
 * `gridExtra`
+* `geojsonsf`
 
 For the exact R environment and package versions used in the analysis, see [`sessionInfo.txt`](sessionInfo.txt).
 
