@@ -10,32 +10,50 @@ This repository contains the R code used for the main empirical analyses present
 
 The analysis combines group-time event-study diagnostics for staggered LEZ adoption with non-spatial two-way fixed-effects (TWFE) models and spatial panel models. The repository also includes code for spatial autocorrelation diagnostics, robustness analyses using alternative spatial-weight matrices, and placebo tests.
 
-
+- Air pollution: [AirKorea annual air-quality data](https://airkorea.or.kr/web/detailViewDown?pMENU_NO=125)
+- Meteorology: [KMA Open MET Data Portal](https://data.kma.go.kr/resources/html/en/ncdci.html)
+- Road paving: [KOSIS road statistics](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL20721&conn_path=I3)
+- Registered vehicles: [KOSIS vehicles per capita](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL20731&conn_path=I3)
+- Daily distance per vehicle: [Korea Transportation Safety Authority data](https://www.data.go.kr/data/15088483/fileData.do)
+- Urban land use: [KOSIS/LX urban-area statistics](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL20421E&conn_path=I3)
+- LEZ rollout: [MECAR old-diesel vehicle restriction information](https://www.mecar.or.kr/dr/info/oldDieselCarAlwaysDr.do)
 ### Data Sources
 
 - **Air pollution**
-  - **Source:** Air Korea
+  - **Source:** [AirKorea annual air-quality data](https://airkorea.or.kr/web/detailViewDown?pMENU_NO=125)
   - **Variables:** CO, SO2, NO2, O3, and PM10 concentrations
   - **Processing:** Station-level observations were spatially interpolated to si-gun-gu-level values using inverse-distance weighting (IDW; power = 2).
-
+    
 - **Meteorology**
-  - **Source:** Korea Meteorological Administration (KMA) Automated Synoptic Observing System (ASOS) 
+  - **Source:** [KMA Open MET Data Portal](https://data.kma.go.kr/resources/html/en/ncdci.html)
   - **Variables:** Annual average daily precipitation(`avg_rain`), annual average relative humidity(`annual_humid`), summer(june-august) average temperature(`summer_temp`), winter(december-february) average temperature(`winter_temp`), summer total sunshine duration(`summer_sun`), and stagnation days(`stagnation_days`).
   - **Construction:** Annual average daily precipitation was calculated as annual total precipitation divided by 365 days. Atmospheric stagnation days were defined as days with mean wind speed ≤ 2 m/s.
   - **Processing:** Station-level observations were spatially interpolated to si-gun-gu-level values using IDW (power = 2).
 
 - **Urban Structure**
-  - **Sources:** Korea Land and Geospatial Informatix Corporation (LX) and Korean Statistical Information Service (KOSIS)
+  - **Sources:** [KOSIS/LX urban-area statistics](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL20421E&conn_path=I3)
   - **Variables:** Population density(`pop_density`), industrial area(`industrial_area`), commercial area(`commercial_area`), and green area(`green_area`).
   - **Construction:** Population density was calculated as resident registered population divided by the land area (km²) of each si-gun-gu derived from the administrative boundary data. Green area was expressed on a per-capita basis.
 
 - **Transportation**
-  - **Sources:** Ministry of Land, Infrastructure and Transport (MOLIT) and Korea Transportation Safety Authority (KTSA)
+  - **Sources:** [KOSIS road statistics](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL20721&conn_path=I3),[KOSIS vehicles per capita](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL20731&conn_path=I3), [Korea Transportation Safety Authority data](https://www.data.go.kr/data/15088483/fileData.do)
   - **Variables:** Road paving rate(`road_paving_rate`), registered vehicles(`cars_per_capita`), and average daily vehicle distance traveled(`daily_km`).
   - **Construction:** Cars per capita was calculated as registered vehicles divided by resident registered population. Average daily vehicle distance traveled is expressed in km per vehicle per day.
-
+  - 
+- **LEZ rollout**
+  - **Source:** [MECAR old-diesel vehicle restriction information](https://www.mecar.or.kr/dr/info/oldDieselCarAlwaysDr.do)
+  - **Treatment timing:** The LEZ was introduced sequentially in 2017, 2018, and 2020. The 2017 phase covered 25 Seoul districts; the 2018 expansion added 35 units in Incheon and selected Gyeonggi areas; and the 2020 expansion added 13 additional Gyeonggi units, resulting in 73 treated si-gun-gu units.
+  - **Variables:**
+    - `D1`: Cumulative LEZ coverage indicator for the first rollout phase. Equals 1 for Seoul units covered from 2017 onward and 0 otherwise.
+    - `D2`: Cumulative LEZ coverage indicator for the second rollout phase. Equals 1 for units covered by 2018, including the `D1` units, Incheon (excluding Ongjin-gun), and selected Gyeonggi si-gun-gu units.
+    - `D3`: Cumulative LEZ coverage indicator for the third rollout phase. Equals 1 for all units covered by 2020, including the `D2` units and additional Gyeonggi si-gun-gu units.
+    - `D`: Time-invariant ever-treated indicator. Equals 1 if a si-gun-gu belongs to any of the three LEZ rollout phases and 0 for never-treated units.
+    - `g`: First LEZ adoption year for each si-gun-gu (`2017`, `2018`, or `2020`); never-treated units are coded as `Inf` in the preprocessing data.
+    - `g_cs`: First-treatment-year variable used for the Callaway–Sant'Anna group-time DID analysis. It corresponds to `g`, with never-treated units recoded to `0`.
+    - `did`: Time-varying LEZ treatment indicator. Equals 0 before a unit's first treatment year and 1 from the treatment year onward; it remains 0 for never-treated units.
+    - `Wdid`: Spatially lagged LEZ treatment exposure, calculated from the contemporaneous `did` values of neighboring si-gun-gu units using a row-standardized spatial weight matrix. Under the baseline specification, the spatial weights are based on five nearest neighbors (kNN, k = 5).
+   
 The final analysis sample consists of 247 si-gun-gu units observed annually from 2014 to 2024, excluding Ongjin-gun and Ulleung-gun.
-
 The analysis scripts require two input files:
 
 - `dat.xlsx`: the processed si-gun-gu-year panel containing outcomes, treatment variables, and covariates.
