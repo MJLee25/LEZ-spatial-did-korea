@@ -42,7 +42,7 @@ The analysis combines group-time event-study diagnostics for staggered LEZ adopt
     - `D3`: Cumulative LEZ coverage indicator for the third rollout phase. Equals 1 for all units covered by 2020, including the `D2` units and additional Gyeonggi si-gun-gu units.
     - `D`: Time-invariant ever-treated indicator. Equals 1 if a si-gun-gu belongs to any of the three LEZ rollout phases and 0 for never-treated units.
     - `g`: First LEZ adoption year for each si-gun-gu (`2017`, `2018`, or `2020`); never-treated units are coded as `Inf` in the preprocessing data.
-    - `g_cs`: First-treatment-year variable used for the Callaway–Sant'Anna group-time DID analysis. It corresponds to `g`, with never-treated units recoded to `0`.
+    - `g_cs`: First-treatment-year variable used for the *Callaway–Sant'Anna group-time DID analysis*. It corresponds to `g`, with never-treated units recoded to `0`.
     - `did`: Time-varying LEZ treatment indicator. Equals 0 before a unit's first treatment year and 1 from the treatment year onward; it remains 0 for never-treated units.
     - `Wdid`: Spatially lagged LEZ treatment exposure, calculated from the contemporaneous `did` values of neighboring si-gun-gu units using a row-standardized spatial weight matrix. Under the baseline specification, the spatial weights are based on five nearest neighbors (kNN, k = 5).
    
