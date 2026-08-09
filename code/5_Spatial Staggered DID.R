@@ -281,10 +281,9 @@ data.frame(
 ### Direct, Indirect, Total
 add_star = function(est, p) {
   star = case_when(
-    p < 0.001 ~ "***",
-    p < 0.01  ~ "**",
-    p < 0.05  ~ "*",
-    p < 0.10  ~ ".",
+    p < 0.01 ~ "***",
+    p < 0.05  ~ "**",
+    p < 0.1  ~ "*",
     TRUE      ~ ""
   )
   
