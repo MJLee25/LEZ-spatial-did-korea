@@ -30,7 +30,7 @@ The analysis combines group-time event-study diagnostics for staggered LEZ adopt
 
 - **Transportation**
   - **Sources:** [KOSIS road statistics](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL20721&conn_path=I3), [KOSIS vehicles per capita](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL20731&conn_path=I3), [Korea Transportation Safety Authority data](https://kosis.kr/statHtml/statHtml.do?sso=ok&returnurl=https%3A%2F%2Fkosis.kr%3A443%2FstatHtml%2FstatHtml.do%3Fconn_path%3DI3%26tblId%3DDT_426001_N004%26orgId%3D426%26)
-  - **Variables:** Road paving rate(`road_paving_rate`), registered vehicles(`cars_per_capita`), and average daily vehicle distance traveled(`daily_km`).
+  - **Variables:** Road paving rate(`road_paving_rate`), cars per capita (`cars_per_capita`), and average daily vehicle distance traveled(`daily_km`).
   - **Construction:** Cars per capita was calculated as registered vehicles divided by resident registered population. Average daily vehicle distance traveled is expressed in km per vehicle per day.
   - 
 - **LEZ rollout**
