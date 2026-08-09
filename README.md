@@ -25,7 +25,7 @@ The analysis combines group-time event-study diagnostics for staggered LEZ adopt
 
 - **Urban Structure**
   - **Sources:** [KOSIS/LX urban-area statistics](https://kosis.kr/statHtml/statHtml.do?orgId=101&tblId=DT_1YL20421E&conn_path=I3)
-  - **Variables:** Population density(`pop_density`), industrial area(`industrial_area`), commercial area(`commercial_area`), and green area(`green_area`).
+  - **Variables:** Population density(`pop_density`), industrial area(`industrial_area`), commercial area(`commercial_area`), and green area(`green_area_per_capita`).
   - **Construction:** Population density was calculated as resident registered population divided by the land area (km²) of each si-gun-gu derived from the administrative boundary data. Green area was expressed on a per-capita basis.
 
 - **Transportation**
