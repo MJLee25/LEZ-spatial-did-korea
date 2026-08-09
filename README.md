@@ -104,7 +104,7 @@ Run the scripts in the following order:
 5. `5_Spatial Staggered DID.R`
 6. `6_Placebo Test.R`
 
-The scripts reproduce the main estimation results, robustness analyses, supplementary analyses, and manuscript figures.
+Conditional on the required processed input files, the scripts reproduce the main statistical analyses, robustness checks, and selected figures reported in the manuscript.
 
 `5_Spatial Staggered DID.R` also contains the following robustness analyses:
 
@@ -116,6 +116,7 @@ The scripts reproduce the main estimation results, robustness analyses, suppleme
 ## Important Interpretation Note
 
 The group-time event-study diagnostic rejects joint parallel trends for all five pollutants in the current analysis. Cohort-specific linear-trend sensitivity checks also materially alter the baseline spatial estimates. Results should therefore be interpreted as conditional spatial policy associations rather than definitive causal effects.
+
 ## Citation
 
 If you use this code, please cite the corresponding article:
