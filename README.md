@@ -19,9 +19,9 @@ The analysis combines group-time event-study diagnostics for staggered LEZ adopt
     
 - **Meteorology**
   - **Source:** [KMA Open MET Data Portal](https://data.kma.go.kr/resources/html/en/ncdci.html)
-  - **Variables:** Annual average daily precipitation(`avg_rain`), annual average relative humidity(`annual_humid`), summer average temperature(`summer_temp`), winter average temperature(`winter_temp`), summer total sunshine duration(`summer_sun`), and stagnation days(`stagnation_days`).
+  - **Variables:** Annual precipitation expressed as mm/day(`avg_rain`), annual average relative humidity(`annual_humid`), summer average temperature(`summer_temp`), winter average temperature(`winter_temp`), summer total sunshine duration(`summer_sun`), and stagnation days(`stagnation_days`).
   - Winter temperature was calculated using December of the preceding year and January–February of the current year, while summer temperature and sunshine duration were calculated using June–August of the current year.
-  - **Construction:** Annual average daily precipitation was calculated as annual total precipitation divided by 365 days. Atmospheric stagnation days were defined as days with mean wind speed ≤ 2 m/s.
+  - **Construction:** Annual precipitation expressed as mm/day was estimated by diving annual total precipitation by 365 days. Atmospheric stagnation days were defined as days with mean wind speed ≤ 2 m/s.
   - **Processing:** Station-level observations were spatially interpolated to si-gun-gu-level values using IDW (power = 2).
 
 - **Urban Structure**
@@ -45,7 +45,7 @@ The analysis combines group-time event-study diagnostics for staggered LEZ adopt
     - `g`: First LEZ adoption year for each si-gun-gu (`2017`, `2018`, or `2020`); never-treated units are coded as `Inf` in the preprocessing data.
     - `g_cs`: First-treatment-year variable used for the *Callaway–Sant'Anna group-time DID analysis*. It corresponds to `g`, with never-treated units recoded to `0`.
     - `did`: Time-varying LEZ treatment indicator. Equals 0 before a unit's first treatment year and 1 from the treatment year onward; it remains 0 for never-treated units.
-    - `w_did`: Spatially lagged LEZ treatment indicator generated within `5_Spatial Staggered DID.R` script for each spatial-weight matrix. The baseline specification uses a row-standardized five-nearest-neighbor matrix (kNN, k = 5).
+    - `w_did`: Spatially lagged LEZ exposure variable generated within `5_Spatial Staggered DID.R` script for each spatial-weight matrix. The baseline specification uses a row-standardized five-nearest-neighbor matrix (kNN, k = 5).
 
 
 The final analysis sample consists of 247 si-gun-gu units observed annually from 2014 to 2024, excluding Ongjin-gun and Ulleung-gun. The analysis scripts require two input files:
@@ -105,7 +105,7 @@ Run the scripts in the following order:
 5. `5_Spatial Staggered DID.R`
 6. `6_Placebo Test.R`
 
-Conditional on the required processed input files, the scripts reproduce the main statistical analyses, robustness checks, and selected figures reported in the manuscript.
+Conditional on the required processed input files, the scripts reproduce the main statistical analyses and selected robustness checks reported in the manuscript.
 
 `5_Spatial Staggered DID.R` also contains the following robustness analyses:
 
@@ -113,7 +113,7 @@ Conditional on the required processed input files, the scripts reproduce the mai
 
 *By default, the script estimates the SDM using kNN matrices with k = 3, 5, and 7 and inverse-distance cutoff matrices of 50 km and 70 km. Because estimating all specifications with simulation-based spatial impacts may be time-consuming, users interested only in the baseline specification can run the kNN k = 5 model (`final_k5`, `listw_k5`, and `res_k5`) and skip the alternative weight-matrix models.*
 - **COVID-19 sensitivity:** uncomment the annotated filter excluding 2020–2022.  *line 23*
-- **Rainfall sensitivity:** uncomment the annotated specifications excluding `avg_rain` from `climate`, `vars`, and `w_climate`.  *line 105-106, 155*
+- **Precipitation sensitivity:** uncomment the annotated specifications excluding `avg_rain` from `climate`, `vars`, and `w_climate`.  *line 105-106, 155*
 
 ## Important Interpretation Note
 
